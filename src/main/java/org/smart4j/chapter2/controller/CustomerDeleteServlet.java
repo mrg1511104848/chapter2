@@ -10,11 +10,11 @@ import java.io.IOException;
 /**
  * Created by 2bu on 2018/2/28.
  */
-@WebServlet("customer_delete")
+@WebServlet("/customer_delete")
 public class CustomerDeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        req.getRequestDispatcher("/WEB-INF/view/customer_delete.jsp").forward(req,resp);
     }
 
     @Override

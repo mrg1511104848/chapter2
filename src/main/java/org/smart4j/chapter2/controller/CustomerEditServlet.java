@@ -10,11 +10,12 @@ import java.io.IOException;
 /**
  * Created by 2bu on 2018/2/28.
  */
-@WebServlet("customer_edit")
+@WebServlet("/customer_edit")
 public class CustomerEditServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+
+        req.getRequestDispatcher("/WEB-INF/view/customer_edit.jsp").forward(req,resp);
     }
 
     @Override
